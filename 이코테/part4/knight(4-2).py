@@ -10,6 +10,7 @@ a1을 입력하면 움직일 수 있는 경우의 수 2가지 출력
 """
 input_data = input()
 
+# 알파벳의 경우를 받아서 숫자로 변환
 if input_data[0] == 'a':
     row = 1
 elif input_data[0] == 'b':
@@ -28,14 +29,17 @@ else:
 col = int(input_data[1])
 
 result = 0
+# 모든 방향에 대해서 설정하고
 direc = [(-2,-1), (-1,-2), (1,-2), (2,-1), (2,1), (1,2), (-1,2), (-2,1)]
 
+# 이 부분에서 하나씩 탐색하면서 진행
 for route in direc:
     drow = row + route[0]
     dcol = col + route[1]
-
+    # 범위를 벗어나는 부분은 continue 통해 코드 진행 x
     if drow < 1 or dcol < 1 or drow > 7 or dcol > 7:
         continue
+    # 코드가 넘어왔을 때만 result값 올려줌
     result += 1
 
 print(result)
