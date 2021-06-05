@@ -39,7 +39,7 @@ for route in direc:
     drow = row + route[0]
     dcol = col + route[1]
     # 범위를 벗어나는 부분은 continue 통해 코드 진행 x
-    if drow < 1 or dcol < 1 or drow > 7 or dcol > 7:
+    if drow < 1 or dcol < 1 or drow > 8 or dcol > 8:
         continue
     # 코드가 넘어왔을 때만 result값 올려줌
     result += 1
