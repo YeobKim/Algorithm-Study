@@ -21,10 +21,12 @@ elif input_data[0] == 'd':
     row = 4
 elif input_data[0] == 'e':
     row = 5
-elif input_data[0] == 'b':
+elif input_data[0] == 'f':
     row = 6
-else:
+elif input_data[0] == 'g':
     row = 7
+else:
+    row = 8
 
 col = int(input_data[1])
 
