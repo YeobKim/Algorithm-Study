@@ -25,11 +25,12 @@ for i in range(n):
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
 
+# direc이 0:북, 1:동, 2:남, 3:서
 def turn_left():
     global direc
-    direc -= 1
+    direc -= 1 # direc이 1일 때 동쪽인데 왼쪽으로 돌면 북쪽이 되기 때문에 direc에 -1을 해줌
     if direc == -1:
-        direc = 3
+        direc = 3 # 북쪽일 때 왼쪽으로 돌면 서쪽이기 때문에 3으로 값을 바꿔줌
 
 cnt = 1
 turn_time = 0
