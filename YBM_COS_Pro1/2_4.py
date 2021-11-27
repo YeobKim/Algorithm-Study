@@ -27,12 +27,15 @@ from itertools import combinations
 def solution(arr, K):
     #여기에 코드를 작성해주세요.
     answer = 0
+    # 조합을 통해서 3개를 뽑을 수 있는 경우의 수를 뽑아냄
     com_list = list(combinations(arr, 3))
-
+    # 조합이 있는 리스트를 보면서
     for num_com in com_list:
         tmp = 0
+        # tmp에 합을 저장
         for i in num_com:
             tmp += i
+        # tmp가 만약 3으로 나누어 떨어진다면 갯수를 올려줌
         if tmp % 3 == 0:
             answer += 1
 
