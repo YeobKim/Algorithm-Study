@@ -15,3 +15,4 @@
 
 ## YBM COS Pro
 [YBM COS Pro 1급](https://www.ybmit.com/cos_pro/cos_pro_r_test.jsp) 샘플 문제 풀이
+*빈칸, 한줄 고치기의 문제는 업로드 하지 않습니다. 구현, 알고리즘 문제만 업로드합니다.
