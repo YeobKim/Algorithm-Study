@@ -32,13 +32,23 @@ solution 함수는 화면에 보이는 문자열을 return 합니다.
 # 다음과 같이 import를 사용할 수 있습니다.
 # import math
 
+
 def solution(phrases, second):
     # 여기에 코드를 작성해주세요.
-    # 14개 까지만 써진다고 했으니까 14-second으로 _의 갯수를 정의
-    answer = '_' * (14-second)
-    # 나머지 글자들을 second만큼 phrases의 글자를 가져옴
-    for i in range(second):
-        answer += phrases[i]
+    answer = ''
+    # 항상 언더바가 존재할 수 있도록 하기 위해 절대값을 취해줌
+    underbar = '_' * abs(14-second%14)
+    
+    # 14 이상일 때와 28 이하일 때 조건을 만족하면 언더바가 뒤에 올 수 있도록 함
+    if second >= 14 and second <= 28:
+        # 14가 넘었을 때의 상황을 위해 %를 사용해 나머지가 들어올 수 있도록 설정
+        answer += phrases[abs(14-second % 14):]
+        answer += underbar
+    # 14 미만일 때와 28을 초과하게 되면 언더바가 앞에 올 수 있도록 함
+    else:
+        answer += underbar
+        answer += phrases[:abs(second % 14)]
+
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
