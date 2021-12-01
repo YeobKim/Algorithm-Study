@@ -1,6 +1,6 @@
 # Algorithm-Study
-코딩테스트 대비 및 알고리즘 구현 공부를 진행합니다.
-언어는 Python을 사용하여 작성합니다.
+* 코딩테스트 대비 및 알고리즘 구현 공부를 진행합니다.
+* 언어는 Python을 사용하여 작성합니다.
 
 ## Baekjoon
 [Baekjoon Algorithm](https://www.acmicpc.net/) 알고리즘의 문제 풀이
